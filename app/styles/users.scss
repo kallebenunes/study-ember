@@ -3,10 +3,22 @@
   margin: 0 auto;
 
   &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     color: gray;
     font-size: 1.5rem;
     text-transform: uppercase;
     padding: 1rem 0;
+
+    button {
+      border: none;
+      background: #a50606;
+      padding: 0.5rem 1rem;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+    }
   }
 
   .section-users {

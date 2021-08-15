@@ -6,11 +6,15 @@ import { Persistore } from 'persistore';
 export const Users = () => {
 
   const [userIsLogged, setUserIsLogged] = useState(Persistore.session.get('user-is-logged'))
-
+  function handleLogout(){
+    Persistore.session.set('user-is-logged', false)
+    setUserIsLogged(Persistore.session.get('user-is-logged'))
+    console.log(userIsLogged);
+  }
   return userIsLogged === 'true'
   ?(
     <div className="container-users">
-      <h1 className="container-users__title">Lista de usuário</h1>
+      <h1 className="container-users__title">Lista de usuário <button onClick={handleLogout}>Sair</button></h1>
       <User/>
     </div>
   )
