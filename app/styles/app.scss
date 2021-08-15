@@ -1,0 +1,15 @@
+@import './index.scss';
+@import './users.scss';
+
+body {
+  max-width: 1440px;
+  background: rgb(240, 239, 239);
+}
+
+*, input, label {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: border-box;
+}
