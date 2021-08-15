@@ -24,7 +24,7 @@ export default class IndexController extends Controller {
       alert("Dados de usuário inválidos !")
     } else {
       Persistore.session.set('user-is-logged', true)
-      window.location.href = '/#/users'
+      this.transitionToRoute('users')
     }
 
   }
